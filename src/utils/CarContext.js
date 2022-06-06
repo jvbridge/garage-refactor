@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
+import { Provider } from "react-redux";
+import store from "./store";
 
 // Create our car context using React.CreateContext()
 export const CarContext = React.createContext();
@@ -13,16 +15,16 @@ export default function CarProvider(props) {
   const cars = [
     {
       id: randomNum(),
-      make: 'Honda',
-      model: 'Civic',
-      year: '2008',
+      make: "Honda",
+      model: "Civic",
+      year: "2008",
       isRunning: false,
     },
     {
       id: randomNum(),
-      make: 'Tesla',
-      model: 'Y',
-      year: '2021',
+      make: "Tesla",
+      model: "Y",
+      year: "2021",
       isRunning: false,
     },
   ];
